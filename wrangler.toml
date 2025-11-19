@@ -8,7 +8,8 @@ compatibility_date = "2025-01-15"
 compatibility_flags = ["nodejs_compat"]
 
 # Pages configuration
-pages_build_output_dir = ".next"
+# Using @cloudflare/next-on-pages output directory
+pages_build_output_dir = ".vercel/output/static"
 
 # Environment variables (set these in Cloudflare dashboard)
 # [env.production]

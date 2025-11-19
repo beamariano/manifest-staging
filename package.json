@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
     "start": "next start",
     "lint": "next lint",
     "deploy": "wrangler pages deploy",
-    "pages:dev": "wrangler pages dev .next --compatibility-date=2025-01-15",
-    "pages:deploy": "yarn build && wrangler pages deploy .next"
+    "pages:dev": "wrangler pages dev .vercel/output/static --compatibility-date=2025-01-15",
+    "pages:deploy": "yarn pages:build && wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "next": "15.4.2",
@@ -25,6 +26,7 @@
     "wired-elements": "^3.0.0-rc.6"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

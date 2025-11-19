@@ -1,0 +1,17 @@
+# Wrangler ignore file - exclude files from Cloudflare Pages deployment
+# https://developers.cloudflare.com/pages/configuration/build-configuration/#ignore-files
+
+# Next.js cache directory (causes file size limit errors)
+.next/cache/
+
+# Node modules
+node_modules/
+
+# Build artifacts that shouldn't be deployed
+*.tsbuildinfo
+.vercel/
+.wrangler/
+
+# Source files (only deploy build output)
+src/
+public/

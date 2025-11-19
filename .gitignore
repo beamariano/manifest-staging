@@ -38,8 +38,9 @@ yarn-error.log*
 .env
 .dev.vars
 
-# vercel
+# vercel / cloudflare pages output
 .vercel
+.vercel/
 
 # wrangler
 .wrangler/
