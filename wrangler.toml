@@ -4,17 +4,17 @@
 name = "manifest-staging"
 compatibility_date = "2025-01-15"
 
+# Node.js compatibility
+compatibility_flags = ["nodejs_compat"]
+
 # Pages configuration
-pages_build_output_dir = ".vercel/output/static"
+pages_build_output_dir = ".next"
 
 # Environment variables (set these in Cloudflare dashboard)
 # [env.production]
 # [env.production.vars]
 # NEXT_PUBLIC_API_URL = "https://api.example.com"
 
-# For local development
-[env.development]
-pages_build_output_dir = ".next"
-
-# Node.js compatibility
-compatibility_flags = ["nodejs_compat"]
+# [env.preview]
+# [env.preview.vars]
+# NEXT_PUBLIC_API_URL = "https://preview-api.example.com"
