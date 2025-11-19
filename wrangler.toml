@@ -11,6 +11,10 @@ compatibility_flags = ["nodejs_compat"]
 # Using @cloudflare/next-on-pages output directory
 pages_build_output_dir = ".vercel/output/static"
 
+# Build command - run @cloudflare/next-on-pages instead of just next build
+[build]
+command = "yarn pages:build"
+
 # Environment variables (set these in Cloudflare dashboard)
 # [env.production]
 # [env.production.vars]
